@@ -4,6 +4,7 @@ const HeroSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
+        unique: true,
         select: false
     },
     nickname: {
@@ -21,7 +22,7 @@ const HeroSchema = new mongoose.Schema({
     }],
     teamwork: {
         type: String,
-        default: 'passive'
+        default: 'indiferente'
     }
 });
 
